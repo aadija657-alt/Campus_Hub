@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #0f172a;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 480px;
+  margin: auto;
+  background: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background: #0f172a;
+  color: white;
+}
+
+.navbar h2 {
+  color: white;
+  font-size: 22px;
+}
+
+.navbar button {
+  padding: 9px 14px;
+  margin-left: 6px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login {
+  background: white;
+  color: #0f172a;
+}
+
+.signup {
+  background: #2563eb;
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 45px 20px 30px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.start-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background: #f8fafc;
+  padding: 22px 15px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #64748b;
+}
+.auth-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 30px 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-card h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.auth-card > p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+}
+
+.auth-card input:focus {
+  border-color: #2563eb;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* GYM MODULE */
+
+.gym-page {
+  min-height: 100vh;
+  padding: 50px 30px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.gym-page h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.gym-intro {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.gym-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.gym-card {
+  width: 300px;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+.gym-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gym-card p {
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+.gym-card button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.back-btn {
+  margin-top: 40px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #0f172a;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}

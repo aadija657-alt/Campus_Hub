@@ -1,0 +1,206 @@
+
+.complaints-page {
+  min-height: 100vh;
+  padding: 30px 20px;
+  background: #f4f7fb;
+  font-family: Arial, sans-serif;
+  color: #0f172a;
+}
+
+.complaints-header {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  padding: 30px;
+  background: #0f172a;
+  color: white;
+  border-radius: 16px;
+}
+
+.complaints-header h1 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.complaints-header p {
+  margin-bottom: 0;
+  color: #cbd5e1;
+}
+
+.complaints-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.complaint-form-card,
+.complaint-list-card {
+  padding: 26px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.07);
+}
+
+.complaint-form-card h2,
+.complaint-list-card h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+  color: #0f172a;
+}
+
+.complaint-form-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.complaint-form-card label {
+  margin: 14px 0 7px;
+  font-weight: bold;
+  color: #334155;
+}
+
+.complaint-form-card input,
+.complaint-form-card select,
+.complaint-form-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+  background: white;
+}
+
+.complaint-form-card input:focus,
+.complaint-form-card select:focus,
+.complaint-form-card textarea:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+.complaint-form-card textarea {
+  resize: vertical;
+}
+
+.complaint-submit-btn {
+  margin-top: 22px;
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.complaint-submit-btn:hover {
+  background: #1d4ed8;
+}
+
+.empty-complaints {
+  padding: 20px;
+  color: #64748b;
+  background: #f8fafc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.complaint-item {
+  margin-bottom: 16px;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+.complaint-item h3 {
+  margin-top: 0;
+  color: #1d4ed8;
+}
+
+.complaint-item p {
+  line-height: 1.5;
+  color: #475569;
+}
+
+.complaint-status {
+  display: inline-block;
+  padding: 7px 12px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.complaint-back-link {
+  grid-column: 1 / -1;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.complaint-back-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .complaints-page {
+    padding: 18px 12px;
+  }
+
+  .complaints-header {
+    padding: 22px;
+  }
+
+  .complaints-header h1 {
+    font-size: 24px;
+  }
+
+  .complaint-form-card,
+  .complaint-list-card {
+    padding: 20px;
+  }
+}
+
+/* Fix complaint form input fields */
+
+.complaint-form-card input,
+.complaint-form-card select,
+.complaint-form-card textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 10px 0 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #0f172a;
+    font-size: 16px;
+    outline: none;
+    pointer-events: auto;
+}
+
+.complaint-form-card input:focus,
+.complaint-form-card select:focus,
+.complaint-form-card textarea:focus {
+    border-color: #2563eb;
+}
+
+.complaint-form-card textarea {
+    resize: vertical;
+    min-height: 100px;
+    cursor: text;
+}
+
+.complaint-form-card input {
+    cursor: text;
+}
+
+.complaint-form-card select {
+    cursor: pointer;
+}
