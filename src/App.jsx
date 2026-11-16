@@ -5,7 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import Dashboard from "./Dashboard";
-import Admin from "./Admin";
+import Admin from "admin";
 import Hostel from "./Hostel";
 import Mess from "./Mess";
 import Gym from "./Gym";
