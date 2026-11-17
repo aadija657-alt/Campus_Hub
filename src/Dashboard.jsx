@@ -78,7 +78,21 @@ function Dashboard() {
           </div>
         )}
       </section>
-
+<div style={{ marginTop: "25px" }}>
+  <Link to="/profile" style={{ textDecoration: "none" }}>
+    <button style={{
+      padding: "13px 25px",
+      background: "#0f172a",
+      color: "white",
+      border: "none",
+      borderRadius: "8px",
+      cursor: "pointer",
+      fontWeight: "bold"
+    }}>
+      👤 My Profile
+    </button>
+  </Link>
+</div>
       {/* Services */}
       <div style={{
         display: "grid",
@@ -118,6 +132,20 @@ function Dashboard() {
           link="/complaints"
           buttonText="Manage Complaints"
         />
+        <ServiceCard
+  icon="💳"
+  title="Payments"
+  description="View hostel, mess and gym payment details."
+  link="/payments"
+  buttonText="View Payments"
+/>
+<ServiceCard
+  icon="🛎️"
+  title="Student Services"
+  description="Explore cleaning, maintenance, laundry and other daily services."
+  link="/student-services"
+  buttonText="Explore Services"
+/>
       </div>
 
       {/* Footer */}

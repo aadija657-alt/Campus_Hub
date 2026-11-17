@@ -1,15 +1,29 @@
 
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 
 import Login from "./Login";
 import Register from "./Register";
 import Dashboard from "./Dashboard";
-import Admin from "admin";
+import Admin from "./Admin";
 import Hostel from "./Hostel";
 import Mess from "./Mess";
 import Gym from "./Gym";
 import Complaints from "./Complaints";
+import Payments from "./Payments";
+import StudentServices from "./StudentServices";
+import Profile from "./Profile";
+
+// Protect pages that require login
+function ProtectedRoute({ children }) {
+  const token = localStorage.getItem("campushubToken");
+
+  if (!token) {
+    return <Navigate to="/login" replace />;
+  }
+
+  return children;
+}
 
 function Home() {
   return (
@@ -71,12 +85,16 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/admin" element={<Admin />} />
-      <Route path="/hostel" element={<Hostel />} />
-      <Route path="/mess" element={<Mess />} />
-      <Route path="/gym" element={<Gym />} />
-      <Route path="/complaints" element={<Complaints />} />
+
+      <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+      <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+      <Route path="/hostel" element={<ProtectedRoute><Hostel /></ProtectedRoute>} />
+      <Route path="/mess" element={<ProtectedRoute><Mess /></ProtectedRoute>} />
+      <Route path="/gym" element={<ProtectedRoute><Gym /></ProtectedRoute>} />
+      <Route path="/complaints" element={<ProtectedRoute><Complaints /></ProtectedRoute>} />
+      <Route path="/payments" element={<ProtectedRoute><Payments /></ProtectedRoute>} />
+      <Route path="/student-services" element={<ProtectedRoute><StudentServices /></ProtectedRoute>} />
+      <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
     </Routes>
   );
 }

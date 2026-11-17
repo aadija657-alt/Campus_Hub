@@ -234,3 +234,90 @@ body {
   cursor: pointer;
   font-size: 16px;
 }
+
+/* MESS MODULE CARDS */
+
+.module-page {
+  min-height: 100vh;
+  padding: 50px 30px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.module-page h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.module-page > p {
+  color: #64748b;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.module-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+  text-align: left;
+  border: 1px solid #e2e8f0;
+}
+
+.module-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.module-card p {
+  margin: 12px 0;
+  font-size: 16px;
+  color: #475569;
+}
+
+@media (max-width: 600px) {
+  .module-page {
+    padding: 30px 15px;
+  }
+
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MESS DESIGN CORRECTIONS */
+
+.module-page {
+  color: #0f172a;
+  background: #f5f7fb;
+}
+
+.module-page h1 {
+  color: #0f172a !important;
+  text-align: center;
+}
+
+.module-card {
+  color: #0f172a;
+  text-align: center;
+}
+
+.module-card h2 {
+  color: #0f172a !important;
+  text-align: center;
+}
+
+.module-card p {
+  color: #334155;
+  text-align: center;
+  line-height: 1.6;
+}

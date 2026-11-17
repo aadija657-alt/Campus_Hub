@@ -1,62 +1,98 @@
+
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Gym() {
+  const [gyms, setGyms] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/gym")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Unable to load gyms");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setGyms(data.gym || []);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setError("Could not connect to the server.");
+        setLoading(false);
+      });
+  }, []);
+
   return (
-    <div className="gym-page">
+    <div style={{
+      minHeight: "100vh",
+      background: "#f4f7fb",
+      padding: "30px",
+      fontFamily: "Arial"
+    }}>
 
-      <h1>🏋️ CampusHub Gym Services</h1>
+      <Link to="/dashboard" style={{
+        textDecoration: "none",
+        color: "#2563eb"
+      }}>
+        ← Back to Dashboard
+      </Link>
 
-      <p className="gym-intro">
-        Find nearby gyms with membership fees, timings, facilities and contact details.
+      <h1 style={{ color: "#0f172a", marginTop: "25px" }}>
+        Find Your Gym
+      </h1>
+
+      <p style={{ color: "#64748b" }}>
+        Explore gym options and fitness facilities for students in Kota.
       </p>
 
-      <div className="gym-container">
+      {loading && <p>Loading gyms...</p>}
 
-        <div className="gym-card">
-          <h2>Fitness Zone</h2>
+      {error && <p style={{ color: "red" }}>{error}</p>}
 
-          <p>📍 Location: Near Landmark City</p>
-          <p>💰 Fee: ₹1,500 / Month</p>
-          <p>🕐 Timing: 6:00 AM - 10:00 PM</p>
-          <p>🏋️ Facilities: Cardio, Weights, Trainer</p>
-          <p>📞 Contact: 98765 43210</p>
+      {!loading && !error && (
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+          gap: "20px"
+        }}>
 
-          <button>View Details</button>
+          {gyms.map((gym) => (
+            <div key={gym.id} style={{
+              background: "white",
+              padding: "22px",
+              borderRadius: "12px",
+              boxShadow: "0 3px 12px rgba(0,0,0,0.07)"
+            }}>
+
+              <h2 style={{ color: "#0f172a" }}>
+                {gym.name}
+              </h2>
+
+              <p>📍 {gym.location}</p>
+
+              <h2 style={{ color: "#2563eb" }}>
+                ₹{Number(gym.membership_price).toLocaleString("en-IN")} / month
+              </h2>
+
+              <p>
+                🏋️ <strong>Facilities:</strong> {gym.facilities}
+              </p>
+
+              <p>🕐 Timings: {gym.timings}</p>
+
+            </div>
+          ))}
+
         </div>
+      )}
 
-
-        <div className="gym-card">
-          <h2>Student Fitness Club</h2>
-
-          <p>📍 Location: Rajeev Gandhi Nagar</p>
-          <p>💰 Fee: ₹1,200 / Month</p>
-          <p>🕐 Timing: 5:30 AM - 10:00 PM</p>
-          <p>🏋️ Facilities: Weights, Cardio, Steam</p>
-          <p>📞 Contact: 98765 12345</p>
-
-          <button>View Details</button>
-        </div>
-
-
-        <div className="gym-card">
-          <h2>Power Gym</h2>
-
-          <p>📍 Location: Talwandi</p>
-          <p>💰 Fee: ₹1,800 / Month</p>
-          <p>🕐 Timing: 6:00 AM - 11:00 PM</p>
-          <p>🏋️ Facilities: CrossFit, Weights, Trainer</p>
-          <p>📞 Contact: 98765 67890</p>
-
-          <button>View Details</button>
-        </div>
-
-      </div>
-
-      <Link to="/dashboard">
-        <button className="back-btn">
-          Back to Dashboard
-        </button>
-      </Link>
+      {!loading && !error && gyms.length === 0 && (
+        <p>No gyms found.</p>
+      )}
 
     </div>
   );
