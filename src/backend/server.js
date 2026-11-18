@@ -21,9 +21,11 @@ const loginLimiter = rateLimit({
     message: "Too many login attempts. Please try again after 15 minutes."
   }
 });
-
 app.use(cors({
-  origin: "http://localhost:5173"
+  origin: [
+    "http://localhost:5173",
+    "https://shimmering-enthusiasm-production-00eeabae.up.railway.app"
+  ]
 }));
 app.use(express.json());
 async function logActivity(adminId, action, details) {
