@@ -8,7 +8,7 @@ function Gym() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://https://campushub-production-5af35267.up.railway.app/api/gym")
+    fetch("https://campushub-production-5af35267.up.railway.app/api/gym")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Unable to load gyms");

@@ -32,7 +32,7 @@ function Complaints() {
       const token = localStorage.getItem("campushubToken");
 
 const response = await fetch(
-  "http://https://campushub-production-5af35267.up.railway.app/api/complaints",
+  "https://campushub-production-5af35267.up.railway.app/api/complaints",
   {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -82,7 +82,7 @@ const response = await fetch(
       const token = localStorage.getItem("campushubToken");
 
 const response = await fetch(
-  "http://https://campushub-production-5af35267.up.railway.app/api/complaints",
+  "https://campushub-production-5af35267.up.railway.app/api/complaints",
   {
     method: "POST",
     headers: {

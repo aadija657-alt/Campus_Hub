@@ -52,12 +52,12 @@ useEffect(() => {
         messRes,
         gymRes
       ] = await Promise.all([
-        fetch("http://https://campushub-production-5af35267.up.railway.app/api/admin/students", { headers }),
-        fetch("http://https://campushub-production-5af35267.up.railway.app/api/admin/complaints", { headers }),
-        fetch("http://https://campushub-production-5af35267.up.railway.app/api/admin/service-requests", { headers }),
-        fetch("http://https://campushub-production-5af35267.up.railway.app/api/admin/hostels", { headers }),
-        fetch("http://https://campushub-production-5af35267.up.railway.app/api/admin/mess", { headers }),
-        fetch("http://https://campushub-production-5af35267.up.railway.app/api/admin/gym", { headers })
+        fetch("https://campushub-production-5af35267.up.railway.app/api/admin/students", { headers }),
+        fetch("https://campushub-production-5af35267.up.railway.app/api/admin/complaints", { headers }),
+        fetch("https://campushub-production-5af35267.up.railway.app/api/admin/service-requests", { headers }),
+        fetch("https://campushub-production-5af35267.up.railway.app/api/admin/hostels", { headers }),
+        fetch("https://campushub-production-5af35267.up.railway.app/api/admin/mess", { headers }),
+        fetch("https://campushub-production-5af35267.up.railway.app/api/admin/gym", { headers })
       ]);
 
       const [
@@ -169,7 +169,7 @@ useEffect(() => {
 
     try {
       const response = await fetch(
-        "http://https://campushub-production-5af35267.up.railway.app/api/admin/students",
+        "https://campushub-production-5af35267.up.railway.app/api/admin/students",
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -199,7 +199,7 @@ useEffect(() => {
 
     try {
       const response = await fetch(
-        "http://https://campushub-production-5af35267.up.railway.app/api/admin/complaints",
+        "https://campushub-production-5af35267.up.railway.app/api/admin/complaints",
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -228,7 +228,7 @@ async function loadServiceRequests() {
 
   try {
     const response = await fetch(
-      "http://https://campushub-production-5af35267.up.railway.app/api/admin/service-requests",
+      "https://campushub-production-5af35267.up.railway.app/api/admin/service-requests",
       {
         headers: {
           Authorization: `Bearer ${token}`
@@ -262,7 +262,7 @@ async function loadActivityLogs() {
 
   try {
     const response = await fetch(
-      "http://https://campushub-production-5af35267.up.railway.app/api/admin/activity-logs",
+      "https://campushub-production-5af35267.up.railway.app/api/admin/activity-logs",
       {
         headers: {
           Authorization: `Bearer ${token}`
@@ -296,7 +296,7 @@ async function loadActivityLogs() {
 
     try {
       const response = await fetch(
-        "http://https://campushub-production-5af35267.up.railway.app/api/admin/payments",
+        "https://campushub-production-5af35267.up.railway.app/api/admin/payments",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -330,7 +330,7 @@ async function loadActivityLogs() {
 
     try {
       const response = await fetch(
-        `http://https://campushub-production-5af35267.up.railway.app/api/admin/complaints/${complaintId}/status`,
+        `https://campushub-production-5af35267.up.railway.app/api/admin/complaints/${complaintId}/status`,
         {
           method: "PATCH",
           headers: {
@@ -368,7 +368,7 @@ async function updateServiceRequestStatus(requestId, status) {
 
   try {
     const response = await fetch(
-      `http://https://campushub-production-5af35267.up.railway.app/api/admin/service-requests/${requestId}/status`,
+      `https://campushub-production-5af35267.up.railway.app/api/admin/service-requests/${requestId}/status`,
       {
         method: "PATCH",
         headers: {
@@ -409,7 +409,7 @@ async function updateServiceRequestStatus(requestId, status) {
 
     try {
       const response = await fetch(
-        "http://https://campushub-production-5af35267.up.railway.app/api/admin/hostels",
+        "https://campushub-production-5af35267.up.railway.app/api/admin/hostels",
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -448,8 +448,8 @@ async function updateServiceRequestStatus(requestId, status) {
 
     try {
       const url = editingId
-        ? `http://https://campushub-production-5af35267.up.railway.app/api/admin/hostels/${editingId}`
-        : "http://https://campushub-production-5af35267.up.railway.app/api/admin/hostels";
+        ? `https://campushub-production-5af35267.up.railway.app/api/admin/hostels/${editingId}`
+        : "https://campushub-production-5af35267.up.railway.app/api/admin/hostels";
 
       const response = await fetch(url, {
         method: editingId ? "PUT" : "POST",
@@ -504,7 +504,7 @@ async function updateServiceRequestStatus(requestId, status) {
 
     try {
       const response = await fetch(
-        `http://https://campushub-production-5af35267.up.railway.app/api/admin/hostels/${id}`,
+        `https://campushub-production-5af35267.up.railway.app/api/admin/hostels/${id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` }
@@ -537,7 +537,7 @@ async function updateServiceRequestStatus(requestId, status) {
 
     try {
       const response = await fetch(
-        "http://https://campushub-production-5af35267.up.railway.app/api/admin/mess",
+        "https://campushub-production-5af35267.up.railway.app/api/admin/mess",
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -577,8 +577,8 @@ async function updateServiceRequestStatus(requestId, status) {
 
     try {
       const url = messEditingId
-        ? `http://https://campushub-production-5af35267.up.railway.app/api/admin/mess/${messEditingId}`
-        : "http://https://campushub-production-5af35267.up.railway.app/api/admin/mess";
+        ? `https://campushub-production-5af35267.up.railway.app/api/admin/mess/${messEditingId}`
+        : "https://campushub-production-5af35267.up.railway.app/api/admin/mess";
 
       const response = await fetch(url, {
         method: messEditingId ? "PUT" : "POST",
@@ -631,7 +631,7 @@ async function updateServiceRequestStatus(requestId, status) {
 
     try {
       const response = await fetch(
-        `http://https://campushub-production-5af35267.up.railway.app/api/admin/mess/${id}`,
+        `https://campushub-production-5af35267.up.railway.app/api/admin/mess/${id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` }
@@ -664,7 +664,7 @@ async function updateServiceRequestStatus(requestId, status) {
 
     try {
       const response = await fetch(
-        "http://https://campushub-production-5af35267.up.railway.app/api/admin/gym",
+        "https://campushub-production-5af35267.up.railway.app/api/admin/gym",
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -704,8 +704,8 @@ async function updateServiceRequestStatus(requestId, status) {
 
     try {
       const url = gymEditingId
-        ? `http://https://campushub-production-5af35267.up.railway.app/api/admin/gym/${gymEditingId}`
-        : "http://https://campushub-production-5af35267.up.railway.app/api/admin/gym";
+        ? `https://campushub-production-5af35267.up.railway.app/api/admin/gym/${gymEditingId}`
+        : "https://campushub-production-5af35267.up.railway.app/api/admin/gym";
 
       const response = await fetch(url, {
         method: gymEditingId ? "PUT" : "POST",
@@ -758,7 +758,7 @@ async function updateServiceRequestStatus(requestId, status) {
 
     try {
       const response = await fetch(
-        `http://https://campushub-production-5af35267.up.railway.app/api/admin/gym/${id}`,
+        `https://campushub-production-5af35267.up.railway.app/api/admin/gym/${id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` }

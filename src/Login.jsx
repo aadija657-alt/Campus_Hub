@@ -16,7 +16,7 @@ function Login() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://https://campushub-production-5af35267.up.railway.app/api/login", {
+      const response = await fetch("https://campushub-production-5af35267.up.railway.app/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

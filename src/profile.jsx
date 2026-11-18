@@ -22,7 +22,7 @@ function Profile() {
       }
 
       try {
-        const response = await fetch("http://https://campushub-production-5af35267.up.railway.app/api/profile", {
+        const response = await fetch("https://campushub-production-5af35267.up.railway.app/api/profile", {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -62,7 +62,7 @@ function Profile() {
     setSaving(true);
 
     try {
-      const response = await fetch("http://https://campushub-production-5af35267.up.railway.app/api/profile", {
+      const response = await fetch("https://campushub-production-5af35267.up.railway.app/api/profile", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

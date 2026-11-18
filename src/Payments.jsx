@@ -15,7 +15,7 @@ function Payments() {
       setError("");
 
       // Create default payment records if needed
-      await fetch("http://https://campushub-production-5af35267.up.railway.app/api/payments/setup", {
+      await fetch("https://campushub-production-5af35267.up.railway.app/api/payments/setup", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -29,7 +29,7 @@ function Payments() {
 
       // Get payment records
       const response = await fetch(
-        "http://https://campushub-production-5af35267.up.railway.app/api/payments",
+        "https://campushub-production-5af35267.up.railway.app/api/payments",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -67,7 +67,7 @@ function Payments() {
       setError("");
 
       const response = await fetch(
-        `http://https://campushub-production-5af35267.up.railway.app/api/payments/${id}/pay`,
+        `https://campushub-production-5af35267.up.railway.app/api/payments/${id}/pay`,
         {
           method: "PATCH",
           headers: {
