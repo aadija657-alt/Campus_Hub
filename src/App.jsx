@@ -10,9 +10,9 @@ import Hostel from "./Hostel";
 import Mess from "./Mess";
 import Gym from "./gym";
 import Complaints from "./complaints";
-import Payments from "./payments";
+import Payments from "./Payments";
 import StudentServices from "./StudentServices";
-import Profile from "./Profile";
+import Profile from "./profile";
 
 // Protect pages that require login
 function ProtectedRoute({ children }) {
