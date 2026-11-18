@@ -10,7 +10,7 @@ import jwt from "jsonwebtoken";
 dotenv.config({ path: "src/backend/.env" });
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const loginLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   limit: 5,
