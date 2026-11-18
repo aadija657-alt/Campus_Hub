@@ -8,7 +8,7 @@ function Mess() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/mess")
+    fetch("http://https://campushub-production-5af35267.up.railway.app/api/mess")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Unable to load mess listings");

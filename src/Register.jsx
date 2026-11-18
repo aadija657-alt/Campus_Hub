@@ -26,7 +26,7 @@ function Register() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/register", {
+      const response = await fetch("http://https://campushub-production-5af35267.up.railway.app/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

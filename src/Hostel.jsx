@@ -10,7 +10,7 @@ function Hostel() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/hostels")
+    fetch("http://https://campushub-production-5af35267.up.railway.app/api/hostels")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Unable to load hostels");
