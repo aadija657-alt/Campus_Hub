@@ -5,12 +5,12 @@ import { Routes, Route, Link, Navigate } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import Dashboard from "./Dashboard";
-import Admin from "./Admin";
+import Admin from "./admin";
 import Hostel from "./Hostel";
 import Mess from "./Mess";
-import Gym from "./Gym";
-import Complaints from "./Complaints";
-import Payments from "./Payments";
+import Gym from "./gym";
+import Complaints from "./complaints";
+import Payments from "./payments";
 import StudentServices from "./StudentServices";
 import Profile from "./Profile";
 
