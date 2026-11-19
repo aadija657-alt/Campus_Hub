@@ -64,9 +64,15 @@ function Login() {
         maxWidth: "400px",
         boxShadow: "0 4px 15px rgba(0,0,0,0.1)"
       }}>
-        <h1 style={{ textAlign: "center", color: "#0f172a" }}>
-          CampusHub Login
-        </h1>
+        <h1 style={{
+  textAlign: "center",
+  color: "#0f172a",
+  fontSize: "36px",
+  lineHeight: "1.2",
+  marginBottom: "20px"
+}}>
+  CampusHub Login
+</h1>
 
         <p style={{ textAlign: "center", color: "#64748b" }}>
           Please log in to continue.
