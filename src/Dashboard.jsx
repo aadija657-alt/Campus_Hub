@@ -171,8 +171,12 @@ function ServiceCard({ icon, title, description, link, buttonText }) {
       display: "flex",
       flexDirection: "column"
     }}>
-      <div style={{ fontSize: "40px" }}>{icon}</div>
-
+      <div style={{
+  fontSize: "40px",
+  marginBottom: "12px"
+}}>
+  {icon}
+</div>
       <h3>{title}</h3>
 
       <p style={{
